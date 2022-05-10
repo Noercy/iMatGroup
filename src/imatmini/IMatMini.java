@@ -17,7 +17,7 @@ import java.io.IOException;
 
 /**
  *
- * @author oloft
+ * @author olofthgytfr
  */
 public class IMatMini extends Application {
 
