@@ -28,6 +28,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
  */
 public class Model {
 
+    public List<ShoppingCart> savedShoppingCarts;
     private static Model instance = null;
     private IMatDataHandler iMatDataHandler;
 
@@ -58,6 +59,10 @@ public class Model {
 
     }
 
+    public void saveShoppingCart(ShoppingCart shoppingCart){
+        this.savedShoppingCarts.add(shoppingCart);
+    }
+
     public List<Product> getProducts() {
         return iMatDataHandler.getProducts();
     }
@@ -85,6 +90,19 @@ public class Model {
         Model.getInstance().getShoppingCart().addItem(item);
         
         //shoppingCart.addProduct(p);
+    }
+
+    //TODO cant remove if still zero, more work needed, basic funciton works
+    public void removeFromShoppingCart(Product p) {
+        int index = 0;
+        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
+        for (ShoppingItem item: shoppingCart.getItems()) {
+            if(item.getProduct().getProductId() == p.getProductId()){
+                shoppingCart.removeItem(index);
+                break;
+            }
+            index++;
+        }
     }
 
     public List<String> getCardTypes() {
@@ -127,8 +145,9 @@ public class Model {
     public int getNumberOfOrders() {
 
         return iMatDataHandler.getOrders().size();
-
     }
+
+
 
     public void shutDown() {
         iMatDataHandler.shutDown();
