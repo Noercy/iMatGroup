@@ -40,5 +40,6 @@
             <Image url="@../../../../../Downloads/minus.png" />
          </image>
       </ImageView>
+      <Button layoutX="83.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleRemoveAction" text="Tabort" />
    </children>
 </fx:root>
