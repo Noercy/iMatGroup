@@ -34,7 +34,7 @@ public class IMatMini extends Application {
     }
 
     /**
-     * @param args the command line arguments
+     * @param args the command line arguments dsds
      */
     public static void main(String[] args) {
         launch(args);
