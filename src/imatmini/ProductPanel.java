@@ -58,4 +58,12 @@ public class ProductPanel extends AnchorPane {
         System.out.println("Add " + product.getName());
         model.addToShoppingCart(product);
     }
+
+    @FXML
+    private void handleRemoveAction(ActionEvent event) {
+        System.out.println("Remove " + product.getName());
+        model.removeFromShoppingCart(product);
+    }
+
+
 }

@@ -87,6 +87,16 @@ public class Model {
         //shoppingCart.addProduct(p);
     }
 
+    public void removeFromShoppingCart(Product p) {
+        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
+
+        ShoppingItem item = new ShoppingItem(p);
+
+        Model.getInstance().getShoppingCart().removeItem(item);
+        //shoppingCart.removeItem();
+        //shoppingCart.addProduct(p);
+    }
+
     public List<String> getCardTypes() {
         return availableCardTypes;
     }
@@ -127,8 +137,9 @@ public class Model {
     public int getNumberOfOrders() {
 
         return iMatDataHandler.getOrders().size();
-
     }
+
+
 
     public void shutDown() {
         iMatDataHandler.shutDown();
