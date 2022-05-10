@@ -145,8 +145,9 @@ public class Model {
     public int getNumberOfOrders() {
 
         return iMatDataHandler.getOrders().size();
-
     }
+
+
 
     public void shutDown() {
         iMatDataHandler.shutDown();

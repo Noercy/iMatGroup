@@ -67,4 +67,7 @@ public class ProductPanel extends AnchorPane {
         Product pr = model.getProduct(product.getProductId());
         model.removeFromShoppingCart(pr);
     }
+
+
+
 }
