@@ -58,4 +58,8 @@ public class ProductPanel extends AnchorPane {
         System.out.println("Add " + product.getName());
         model.addToShoppingCart(product);
     }
+
+
+
+
 }

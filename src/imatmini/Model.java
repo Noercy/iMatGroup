@@ -87,6 +87,8 @@ public class Model {
         //shoppingCart.addProduct(p);
     }
 
+   
+
     public List<String> getCardTypes() {
         return availableCardTypes;
     }
@@ -127,8 +129,9 @@ public class Model {
     public int getNumberOfOrders() {
 
         return iMatDataHandler.getOrders().size();
-
     }
+
+
 
     public void shutDown() {
         iMatDataHandler.shutDown();
